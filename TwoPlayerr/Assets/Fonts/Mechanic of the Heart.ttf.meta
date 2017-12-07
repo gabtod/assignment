@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d0f5eeed8a544ad4a9551d46a031d766
+timeCreated: 1512050934
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Mechanic of the Heart
+  fontNames:
+  - Mechanic of the Heart
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
