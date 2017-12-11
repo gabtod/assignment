@@ -19,7 +19,7 @@ public class Player1Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void AddScorePlayer1(int player1score)

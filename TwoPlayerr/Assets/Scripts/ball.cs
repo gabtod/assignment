@@ -36,9 +36,14 @@ public class ball : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //print("Trigger");
-        if (collision.name == "LoseBorderLeft" || collision.name == "LoseBorderRight")
+        if (collision.name == "LoseBorderLeft")
         {
             Vector3 temp = new Vector3(10, 0, 0);
+            this.transform.position += temp;
+        }
+        if (collision.name == "LoseBorderRight")
+        {
+            Vector3 temp = new Vector3(-10, 0, 0);
             this.transform.position += temp;
         }
         //levelManager.LoadNewScene("Level01");

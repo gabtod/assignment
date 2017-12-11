@@ -8,15 +8,14 @@ public class LoseBorderRight : MonoBehaviour
 
     LevelManager levelManager = new LevelManager();
     public Text player1text;
-    public int scorepl1=0;
+    public int scorepl1;
+    public int max;
 
     void Start()
     {
-        DontDestroyOnLoad(this);
-        //scorepl1 = 0;
+        //max = 10;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
 
@@ -29,16 +28,15 @@ public class LoseBorderRight : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //print("Trigger");
-        levelManager.LoadNewScene("Start");
         
-        AddScorePlayer1(scorepl1);
-       //levelManager.LoadNewScene("Level01");
-    }
+        scorepl1 = scorepl1 + 1;
+        player1text.text = "Player 1: " + scorepl1;
 
-    public void AddScorePlayer1(int scorepl1)
-    {
-        scorepl1++;
-        player1text.text = "Player 1: " + (scorepl1);
+        if (max == scorepl1)
+        {
+            levelManager.LoadNewScene("Start");
+        }
+
     }
+    
 }
