@@ -97,6 +97,7 @@
     <Compile Include="Assets\Scripts\LoseBorder.cs" />
     <Compile Include="Assets\Scripts\PaddleKeys.cs" />
     <Compile Include="Assets\Scripts\PaddleMouse.cs" />
+    <Compile Include="Assets\Scripts\SpaceText.cs" />
     <Compile Include="Assets\Scripts\ball.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
