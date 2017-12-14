@@ -2,28 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Text winner;
+   
 
     public void LoadNewScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene + 1);
+    }
+
+     void Update()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "EndScreen")
+        {
+            GetTotalScore();
+        }
     }
 
     public void QuitGame()
     {
         UnityEditor.EditorApplication.isPlaying = false;
     }
-    
-    
+
+    public void GetTotalScore()
+    {
+
+        if (LoseBorderRight.Player1TotalScore > LoseBorderLeft.Player2TotalScore)
+        {
+            winner.text = "Player1";
+        }
+        else if (LoseBorderRight.Player1TotalScore < LoseBorderLeft.Player2TotalScore)
+        {
+            winner.text = "Player2";
+        }
+        else
+            winner.text = "No winner";
+    }
 }

@@ -7,8 +7,8 @@ public class ball : MonoBehaviour {
     bool gameStarted = false;
     Vector3 initialPos;
 
-    //public Random r = new Random();
-    // Use this for initialization
+   
+
     void Start () {
         initialPos = gameObject.transform.position;
 	}
@@ -25,7 +25,7 @@ public class ball : MonoBehaviour {
         {
             gameStarted = true;
 
-            float[] ranX = new float[] { -10f, 10f };
+            //float[] ranX = new float[] { -10f, 10f };
 
             //this.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(ranX[0], ranX[1]), 2f);
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class LoseBorderLeft : MonoBehaviour
 {
     public ball ball;
@@ -11,11 +12,10 @@ public class LoseBorderLeft : MonoBehaviour
     public Text player2text;
     public int scorepl2;
     public int max;
-    public static int player2totalscore;
+    public static int Player2TotalScore;
     public int changescore;
 
-    //Scene scene = SceneManager.GetActiveScene();
-
+    
     void Start()
     {
         //max = 10;
@@ -36,14 +36,16 @@ public class LoseBorderLeft : MonoBehaviour
     {
         ball.ballreset();
         scorepl2 = scorepl2 + changescore;
-
+        Player2TotalScore += changescore;
+        print("the score of pl 2 is" + Player2TotalScore);
         player2text.text = "Player 2: " + scorepl2;
         //print(max1);
 
         if (max == scorepl2)
         {
             scorepl2 = 0;
-            levelManager.LoadNewScene("Level2");
+            int currentScene = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentScene + 1);
         }
 
     }
