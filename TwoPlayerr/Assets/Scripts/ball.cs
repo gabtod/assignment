@@ -5,11 +5,12 @@ using UnityEngine;
 public class ball : MonoBehaviour {
 
     bool gameStarted = false;
+    Vector3 initialPos;
 
     //public Random r = new Random();
     // Use this for initialization
     void Start () {
-		
+        initialPos = gameObject.transform.position;
 	}
 	
 	// Update is called once per frame
@@ -35,18 +36,15 @@ public class ball : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //print("Trigger");
-        if (collision.name == "LoseBorderLeft")
-        {
-            Vector3 temp = new Vector3(10, 0, 0);
-            this.transform.position += temp;
-        }
-        if (collision.name == "LoseBorderRight")
-        {
-            Vector3 temp = new Vector3(-10, 0, 0);
-            this.transform.position += temp;
-        }
-        //levelManager.LoadNewScene("Level01");
+       
+    }
+
+    public void ballreset()
+    {
+        gameStarted = false;
+        
+        gameObject.transform.position = initialPos;
+        GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0,0);
     }
 
     

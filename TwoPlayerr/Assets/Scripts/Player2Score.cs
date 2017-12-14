@@ -8,7 +8,8 @@ public class Player2Score : MonoBehaviour
 
     public Text player2text;
     public int player2score;
-
+    //public static int player2totalscore;
+    //public int changescore;
     // Use this for initialization
     void Start()
     {
@@ -22,9 +23,10 @@ public class Player2Score : MonoBehaviour
 
     }
 
-    public void AddScorePlaye2(int player1score)
-    {
-        player2score++;
-        player2text.text = "Player 2: " + player2score;
-    }
+    //public void AddScorePlaye2(int player1score)
+    //{
+    //    player2score= player2score + changescore;
+    //    player2totalscore += changescore;
+    //    player2text.text = "Player 2: " + player2score;
+    //}
 }
