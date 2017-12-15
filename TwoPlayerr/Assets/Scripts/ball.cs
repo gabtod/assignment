@@ -6,6 +6,8 @@ public class ball : MonoBehaviour {
 
     bool gameStarted = false;
     Vector3 initialPos;
+    public float velocityX;
+    public float velocityY;
 
    
 
@@ -25,11 +27,14 @@ public class ball : MonoBehaviour {
         {
             gameStarted = true;
 
-            //float[] ranX = new float[] { -10f, 10f };
+            //float[] velocityY = new float[] { -10f, 10f };
+            //float[] velocityX = new float[] {-10f, 10f};
+            //float x = Random.Range(velocityX[0], velocityX[1]);
 
-            //this.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(ranX[0], ranX[1]), 2f);
+            //this.GetComponent<Rigidbody2D>().velocity = new Vector2(x, 2f);// Random.Range(velocityY[0], velocityY[1]));
 
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(-10f, 2f);
+            
+           this.GetComponent<Rigidbody2D>().velocity = new Vector2(velocityX, velocityY);
         }
        
     }

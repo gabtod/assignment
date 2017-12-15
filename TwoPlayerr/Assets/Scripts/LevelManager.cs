@@ -35,13 +35,13 @@ public class LevelManager : MonoBehaviour {
 
         if (LoseBorderRight.Player1TotalScore > LoseBorderLeft.Player2TotalScore)
         {
-            winner.text = "Player1";
+            winner.text = "The winner is Player1";
         }
         else if (LoseBorderRight.Player1TotalScore < LoseBorderLeft.Player2TotalScore)
         {
-            winner.text = "Player2";
+            winner.text = "The winner is Player2";
         }
         else
-            winner.text = "No winner";
+            winner.text = "The scores are equal. There is no winner";
     }
 }
